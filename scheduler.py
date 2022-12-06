@@ -5,6 +5,7 @@ Created on Sat Nov 26 18:52:47 2022
 @author: majes
 """
 
+#What's so funny about sussus amogus
 
 class course():
     def __init__(self, name="", professor="", days="", room=0, conflicts=[], time=0):
