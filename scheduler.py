@@ -37,7 +37,7 @@ if __name__ == "__main__":
     data = pd.read_csv("input.csv")
     
     for i in range(len(data)):
-        row = data.iloc[0]
+        row = data.iloc[i]
         
         name = row["Course"]
         professor = row["Professors"]
@@ -55,8 +55,8 @@ if __name__ == "__main__":
     schedule = [[], []]
     
     i = 0
-    timeMWF = [800, 900, 1000, 1100, 1200, 100, 200, 300]
-    timeTTH = [800, 930, 1100, 1230, 200, 330]
+    timeMWF = ["8:00", "9:00", "10:00", "11:00", "12:00", "1:00", "2:00", "3:00"]
+    timeTTH = ["8:00", "9:30", "11:00", "12:30", "2:00", "3:30"]
     professors = {"Ryan" : 0, "Gupta" : 0, "Houck" : 0, "Hammarsten" : 0, "Ruggles" : 0,
                   "Walsh" : 0}
     
@@ -84,7 +84,7 @@ if __name__ == "__main__":
             
             
             else:
-                current.time = timeMWF[r.randint(0, 5)]
+                current.time = timeTTH[r.randint(0, 5)]
                 professors[current.professor] += 1
                 
                 for course in schedule[TTH]:
@@ -117,7 +117,7 @@ if __name__ == "__main__":
             
     for day in schedule:
         for course in day:
-            print(course)
+            print(course, course.day, course.time)
     
         
      

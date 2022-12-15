@@ -2,4 +2,4 @@ Course,Professors,Day,Room,Conflicts
 CS-115,Ryan,MWF,223,MA-121|CS-260
 CS-260,Ryan,MWF,223,CS-115
 CS-211,Ryan,TTH,223,None
-MA-121,Houck,MWF,CS-115
+MA-121,Houck,MWF,228,CS-115
