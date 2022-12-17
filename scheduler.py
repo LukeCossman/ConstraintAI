@@ -43,15 +43,13 @@ if __name__ == "__main__":
         row = data.iloc[x]
         
         name = row["Course"]
-        professor = row["Professors"]
+        professor = row["Professor"]
         day = row["Day"]
         room = row["Room"]
         conflicts = row["Conflicts"].split("|")
         
         ALL.append(course(name, professor, day, room, conflicts))
         
-    a = data["Room"].value_counts()[223]
-    print(a)    
     
     MWF = 0
     TTH = 1
@@ -62,8 +60,6 @@ if __name__ == "__main__":
     i = 0
     timeMWF = ["8:00", "9:00", "10:00", "11:00", "12:00", "1:00", "2:00", "3:00"]
     timeTTH = ["8:00", "9:30", "11:00", "12:30", "2:00", "3:30"]
-    professors = {"Ryan" : 0, "Gupta" : 0, "Houck" : 0, "Hammarsten" : 0, "Ruggles" : 0,
-                  "Walsh" : 0}
     
     tries = 0
     while not solution:
@@ -82,7 +78,7 @@ if __name__ == "__main__":
             
                 for course in schedule[MWF]:
                     if course != current:
-                        if course.time == current.time and course.room == current.time:
+                        if course.time == current.time and course.room == current.room:
                             time_error = True
                         if course.time == current.time and course.name in current.conflicts:
                             time_error = True
@@ -148,11 +144,11 @@ if __name__ == "__main__":
                                              course.time, course.professor,
                                              course.room]
             
-    
     print(output)
+    if not os.path.exists("output.csv"):
+        output.to_csv("output.csv", index=False)
     
         
-    
     
     
     

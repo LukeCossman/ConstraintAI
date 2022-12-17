@@ -1,8 +1,8 @@
-Course,Professors,Day,Room,Conflicts
+Course,Professor,Day,Room,Conflicts
 CS-115,Gupta,MWF,223,MA-121|CS-260
 CS-260,Ryan,MWF,223,CS-115
 CS-211,Ryan,TTH,223,None
-MA-121,Houck,MWF,226,MA-122
+MA-121,Houck,MWF,223,MA-122
 CS-119,Ruggles,MWF,225,CS-342|CS-425
 CS-222,Gupta,TTH,227,CS-356
 CS-230,Walsh,TTH,223,None
@@ -15,5 +15,5 @@ CS-340,Ruggles,MWF,225,CS-342|CS-425
 CS-342,Ruggles,MWF,225,CS-340|CS-392
 CS-356,Gupta,TTH,223,CS-360
 CS-360,Gupta,TTH,227,CS-356
-CS-362,Gupta,TTH,223,CS-370
+CS-362,Gupta,MWF,223,CS-370
 CS-390,Ruggles,MWF,225,None
